@@ -1,0 +1,174 @@
+$primColor: hsl(238, 29%, 16%)
+$secColor: hsl(14, 88%, 65%)
+$questionColor: hsl(237, 12%, 33%)
+$ansColor : hsl(240, 6%, 50%)
+
+$bg1: hsl(273, 75%, 66%)
+$bg2: hsl(240, 73%, 65%)
+
+$dividersColor: hsl(240, 5%, 91%)
+
+/**************** Main Rulez***********/
+
+*
+    padding: 0px
+    margin: 0px
+
+body
+    background: linear-gradient(0deg, $bg2, $bg1 90%)
+    font-family: 'kumbh sans', sans-serif
+    color: $primColor
+    padding-top: 1rem
+
+.container
+    width: 100%
+    height: 100vh
+    margin-bottom: 2rem
+    display: flex
+    align-items: center
+    justify-content: center
+
+    @media(max-width: 700px)
+        height: auto
+        margin-top: 4rem    
+
+::selection
+	color: white
+	background: hsl(273, 75%, 66%)
+
+
+.flex 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+
+//Card
+.sec
+    position: relative
+    background: #fff
+    display: flex
+    width: 98vw
+    max-width: 900px
+    margin: 1rem
+    border-radius: 15px
+    box-shadow: 4px 5px 18px;
+
+    @media(max-width: 700px)
+            display: block
+            padding: 4rem 2rem
+
+    .box-img
+        position: absolute
+        top: 35%
+        right: 90%
+        z-index: 3
+        width: 20%
+        @media(max-width: 700px)
+            display: none        
+
+    .sec-txt, .img-wrap
+        width: 50%
+        position: relative
+        overflow: hidden
+        @media(max-width: 700px)
+            width: 100%
+            overflow: visible
+
+    // section that contains all images
+    .img-wrap
+
+        // images displayed at desktop view and larger views
+        .des-img, .des-img-bg
+            width: 100%
+            position: absolute
+            left: -70px
+            top: 50%
+            transform: translateY(-50%)
+            z-index: 2
+
+            @media(max-width: 700px)
+                display: none
+
+        .des-img-bg
+            z-index: 1
+            width: 180%
+            left: -100%
+            top: 40%
+
+        // images displayed in mobile view and smaller views
+        .mob-img, .mob-img-bg
+            display: none
+            position: absolute
+            top: -170px
+            transform: translateX(-50%)
+            left: 45%
+            
+            @media(max-width: 700px)
+                display: block
+
+        .mob-img-bg
+            top: -50px
+            left: 48%
+
+    // section containing all text
+    .sec-txt
+        padding: 4rem 5rem 4rem 4rem 
+
+        @media(max-width: 700px)
+            padding: 0
+
+        // header (FAQ)
+        h1
+            text-transform: uppercase
+            padding-bottom: 1.5rem
+
+            @media(max-width: 700px)
+                text-align: center
+                padding-top: 7rem
+
+        // question block
+        .question-wrap
+            padding: 1rem
+            padding-left: 0
+            border-bottom: 2px solid $dividersColor
+
+        .question
+            font-size: 1.1em    
+            font-weight: 400
+            color: $questionColor
+            cursor: pointer
+            transition: all ease-in-out .2s
+
+        .question.pressed
+            font-weight: 700
+            color: $primColor 
+
+        .question.pressed:hover
+            color: $primColor
+            
+        .ans-btn
+            cursor: pointer
+            transition: all ease-in-out .5s
+            padding-left: .2rem
+            
+        .ans-btn.pressed
+            transform: rotate(180deg)
+
+        .question:hover
+                color: $secColor 
+
+        .ans
+            height: 0
+            display: none
+            transition: all ease-in-out .5s
+            padding-top: .5rem
+            color: $ansColor
+
+        .ans.pressed
+            height: auto
+            display: block    
+
+.attribution a 
+  color: #f6f6f6
+

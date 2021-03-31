@@ -186,8 +186,9 @@ body {
 }
 
 .sec .sec-txt .question-wrap.pressed .ans {
-  height: auto;
-  display: block;
+  height: 100%;
+  opacity: 100%;
+  padding-top: .5rem;
 }
 
 .sec .sec-txt .question-wrap {
@@ -215,17 +216,16 @@ body {
 
 .sec .sec-txt .ans-btn {
   cursor: pointer;
-  -webkit-transition: all ease-in-out .5s;
-  transition: all ease-in-out .5s;
+  -webkit-transition: all linear .5s;
+  transition: all linear .5s;
   padding-left: .2rem;
 }
 
 .sec .sec-txt .ans {
   height: 0;
-  display: none;
-  -webkit-transition: all ease-in-out .5s;
-  transition: all ease-in-out .5s;
-  padding-top: .5rem;
+  opacity: 0;
+  -webkit-transition: all linear .5s;
+  transition: all linear .5s;
   color: #787887;
 }
 

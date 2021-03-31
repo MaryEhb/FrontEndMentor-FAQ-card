@@ -142,8 +142,9 @@ body
                 transform: rotate(180deg)
 
             .ans
-                height: auto
-                display: block  
+                height: 100%
+                opacity: 100%  
+                padding-top: .5rem
 
         .question-wrap
             padding: 1rem
@@ -165,14 +166,13 @@ body
 
         .ans-btn
             cursor: pointer
-            transition: all ease-in-out .5s
+            transition: all linear .5s
             padding-left: .2rem
 
         .ans
             height: 0
-            display: none
-            transition: all ease-in-out .5s
-            padding-top: .5rem
+            opacity: 0
+            transition: all linear .5s
             color: $ansColor  
 
 .attribution
@@ -181,5 +181,3 @@ body
 
     a 
         color: #f6f6f6
-  
-

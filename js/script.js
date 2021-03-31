@@ -1,6 +1,6 @@
 //Variables
-let questions = document.querySelectorAll(".question-btn");
-let questionsBlock = document.querySelectorAll(".question-wrap");
+const questions = document.querySelectorAll(".question-btn");
+const questionsBlock = document.querySelectorAll(".question-wrap");
 
 //Function called to display or remove the answer
 let press = function (){
